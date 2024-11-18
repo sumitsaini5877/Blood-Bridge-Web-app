@@ -18,9 +18,7 @@ app.use('/api/v1/analytics',require('./routes/analyticsRoutes'))
 app.use('/api/v1/consumer',require('./routes/conumerRoutes'))
 app.use("/api/v1/admin", require("./routes/adminRoutes"));
 
-// Export the app as a serverless function
-const serverless = require('serverless-http');
-module.exports.handler = serverless(app);
+
 
 app.listen(PORT, () => {
     connectDB()
